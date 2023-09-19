@@ -40,6 +40,7 @@ $('.edit_category_admin').click(function () {
     var nameRu = $(this).closest('.panel-title').find('.sub_link').data('nameru');
     var nameAm = $(this).closest('.panel-title').find('.sub_link').data('nameam');
     var icon = $(this).closest('.panel-title').find('.sub_link').data('icon');
+    console.log(id,'ididid')
     $('#category_id_for_edit').val(id);
     $('#category_id_for_edit_show').text(id);
     $('#nameEn').val(name);

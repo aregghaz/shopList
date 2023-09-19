@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ChatsController;
 use App\Http\Controllers\Client\ClientController;
+use App\Http\Controllers\Client\StatisticController;
+use App\Http\Controllers\FilterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\OrderController;
@@ -42,7 +44,9 @@ Route::get('all-product', [ProductController::class, 'allProduct'])->name('allPr
 
 
 
-Route::get('/saveStatistic', ['uses' => "Client\StatisticController@saveStatistic", 'as' => 'saveStatistic']);
+Route::get('/saveStatistic', ['uses' => [StatisticController::class, "saveStatistic"]])->name('saveStatistic');
+
+
 Route::get('/category', [HomeController::class, 'category'])->name('category');
 Route::get('/404', function () {
     return view('404');
@@ -59,7 +63,7 @@ Route::get('/about', [UserController::class, 'about'])->name('about');
 Route::any('/contact', [UserController::class,'contact'])->name('contact');
 
 Route::get('/email-verification', [UserController::class, 'verification'])->name('verification');
-Route::get('/addFiltre', ['as' => 'addFiltre', 'uses' => 'FilterController@addFiltre']);
+Route::get('/addFiltre', [FilterController::class, 'addFiltre'])->name('addFiltre');
 
 Route::any('/searchProduct', [UserController::class,'searchProduct'])->name('searchProduct');
 Route::get('/shop', function () {
@@ -138,7 +142,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/conversation', [AdminController::class,"conversation"]);
         Route::get('/profile', [AdminController::class, "profile"])->name('profile');
         Route::get('/dashboard', [AdminController::class, "home"])->name('adminHome');
-        Route::get('/adminOrders', ['uses' => "Admin\AdminController@adminOrders", 'as' => 'adminOrders']);
+        Route::get('/adminOrders', [AdminController::class, "adminOrders"])->name('adminOrders');
         Route::get('/changeStatus', ['uses' => "Admin\AdminController@changeStatus", 'as' => 'changeStatus']);
         Route::post('/admin_edit_user', [UserController::class,"admin_edit_user"]);
         Route::post('/updateUserFromAdmin', "Admin\AdminController@updateUserFromAdmin");
@@ -150,13 +154,13 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/info', [ClientController::class , "info"])->name('adminInfo');
         Route::post('/addCompany', ['uses' => "Client\ClientController@addCompany", 'as' => 'addCompany']);
         Route::post('/add_category', [CategoriesController::class, "add_category"]);
-        Route::post('/edit_category', "Admin\CategoriesController@edit_category");
+        Route::post('/edit_category', [CategoriesController::class, "edit_category"]);
         Route::get('/del_category/{id}', "Admin\CategoriesController@del_category");
         Route::post('/subcategory', "Admin\CategoriesController@add_sub_category");
         Route::post('/sub_edit_category', "Admin\CategoriesController@sub_edit_category");
         Route::get('/sub_del_category/{id}', [CategoriesController::class, "sub_del_category"]);
 
-        Route::get('/products/getsubcajax', "Admin\ProductController@getsubcategoryajax");
+        Route::get('/products/getsubcajax', [ProductController::class,"getsubcategoryajax"]);
 
 
         Route::get('/products/del_product/{id}', "Admin\ProductController@del_product");
@@ -164,13 +168,17 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/products/featured/{id}', "Admin\ProductController@featured");
         Route::get('/products/sale/{id}', "Admin\ProductController@sale");
         Route::get('/products/best/{id}', "Admin\ProductController@best");
-        Route::get('/brands', "Admin\ProductController@get_brands");
+
+
+        Route::get('/brands', [ProductController::class, "get_brands"]);
+        Route::get('/featureds', [ProductController::class ,"get_featured"]);
+        Route::get('/sales', [ProductController::class, "get_sales"]);
+        Route::get('/bests', [ProductController::class, "get_bests"]);
+
         Route::get('/del_brand/{id}', "Admin\ProductController@del_brand");
-        Route::get('/featureds', "Admin\ProductController@get_featured");
         Route::get('/del_featured/{id}', "Admin\ProductController@del_featured");
-        Route::get('/sales', "Admin\ProductController@get_sales");
+
         Route::get('/del_sales/{id}', "Admin\ProductController@del_sales");
-        Route::get('/bests', "Admin\ProductController@get_bests");
         Route::get('/del_bests/{id}', "Admin\ProductController@del_bests");
 
         Route::get('/notification', [AdminController::class, "notification"])->name('notification');
@@ -186,5 +194,5 @@ Route::get('/privacy-policy', function () {
     return view('shop.privacy', ['noIndex' => true]);
 });
 
-Route::get('messages', 'ChatsController@fetchMessages');
+Route::get('messages', [ChatsController::class,'fetchMessages']);
 Route::post('messages', [ChatsController::class,'sendMessage']);
