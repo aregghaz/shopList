@@ -35,15 +35,15 @@ class ClientController extends Controller
           $image->move(public_path().'/img/companies/', $filename);
 
       }
-       $this->validate($request, [
-           'firstName' => 'required|string|max:55',
-           'lastName' => 'required|string|max:55',
-           'name' => 'required|string|max:55',
-           'email' => 'required|string|email|max:255|unique:users',
-           'phone' => 'required|numeric',
-           'password' => 'required|string|min:6|confirmed',
-           'role' => 'required',
-       ]);
+//       $this->validate($request, [
+//           'firstName' => 'required|string|max:55',
+//           'lastName' => 'required|string|max:55',
+//           'name' => 'required|string|max:55',
+//           'email' => 'required|string|email|max:255|unique:users',
+//           'phone' => 'required|numeric',
+//           'password' => 'required|string|min:6|confirmed',
+//           'role' => 'required',
+//       ]);
 
        $user = new User();
        $user->name = $request->firstName;
