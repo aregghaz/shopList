@@ -59,7 +59,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-7 col-xs-12">
-                        <p>© 2019 <span>ShopList.am</span>
+                        <p>© 2023 <span>ShopList.am</span>
                             @lang('home.allright')<a href="http://fix-mysite.com/" target="_blank">http://fix-mysite.com/</a></p>
                     </div>
                     <div class="col-md-5 col-xs-12">

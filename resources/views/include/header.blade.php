@@ -127,10 +127,10 @@
                                         <i class="fal fa-heart" aria-hidden="true" ></i>
                                     </a>
                                 </li>
-                                <li class="cartLi">
-                                    @include('include.cart')
+{{--                                <li class="cartLi">--}}
+{{--                                    @include('include.cart')--}}
 
-                                </li>
+{{--                                </li>--}}
                                 <li class="bars-li"><span class="far fa-bars menu-bars"></span></li>
                             </ul>
                         </div>
