@@ -340,8 +340,8 @@ ul {
     z-index: 5;
     font-size: 40px;
     line-height: 1;
-    color: #343a40;
-    background: #EDEDED;
+    color: white;
+    background: #9457EB;
     opacity: 0.9;
     padding: 8px;
 }
@@ -366,6 +366,7 @@ ul {
 
 #mainCarousel .item img{
   width: 100%;
+    background-image:url('/img/main-headingbg.jpg');
 }
 
 #mainCarousel .carousel-control .fal{
@@ -1075,7 +1076,7 @@ ul {
 
 .relate-products-in-single .owl-nav button span{
     font-size: 5em;
-    color: #2d8eea;
+    color: #9457EB;
     margin-top: 6px;
     display: inline-block;
 }
@@ -1090,14 +1091,14 @@ ul {
 
 .relate-products-in-single .owl-carousel .owl-nav button.owl-prev{
     left: -54px;
-    background: #ebf2f9;
+    background: #9457EB99;
     padding: 5px 10px !important;
     line-height: 15px;
 }
 
 .relate-products-in-single .owl-carousel .owl-nav button.owl-next{
     right: -54px;
-    background: #ebf2f9;
+    background: #9457EB99;
     padding: 5px 10px !important;
     line-height: 15px;
 }
@@ -1109,7 +1110,7 @@ ul {
 .relate-products-in-single button.owl-dot {
     transition: all 0.2s;
     display: inline-block;
-    background: #ebf2f9;
+    background: #9457EB99;
     width: 20px;
     height: 20px;
     margin: 10px 5px 0;
@@ -1120,7 +1121,7 @@ ul {
 
 .relate-products-in-single .owl-dot.active{
     background: #ffffff;
-    border: 1px solid #2D8EEA;
+    border: 1px solid #9457EB;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -2190,7 +2191,7 @@ ul {
   border-radius: 7px;
 }
 .account-wishlist ul li a{
-    border-right: 1px solid white;
+    border-right: 1px solid #a1a1a1;
 }
 #adv-search .dropdown-lg{
   border-left: 1px solid #cccccc;
@@ -2635,7 +2636,7 @@ ul {
   text-align: center;
 }
 .services2-area .row > div {
-  padding: 0;
+    padding: 0;
 }
 .services2-area .services2-box {
   display: inline-block;
@@ -2843,7 +2844,7 @@ ul {
 }
 
 .offer-area1 h2:before{
-    font-size: 47px;
+    font-size: 30px;
     float: right;
     font-weight: 100;
 }
@@ -2959,7 +2960,7 @@ ul {
 }
 
 .product-area.company{
-    padding: 0 0 64px;
+    padding: 0 0 60px;
 }
 
 .myisotop1 {
@@ -3247,7 +3248,10 @@ ul {
     text-align: center;
     border: 1px solid #efefef;
     box-shadow: 0 3px 7px rgba(0,0,0,.12);
-    border-radius: 7px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
 
 .rain .product-box1:before{
@@ -3269,6 +3273,7 @@ ul {
     color: #2D8EEA;
     padding: 5px 15px;
     background: #fafafa;
+    border-bottom-right-radius: 10px;
 }
 
 .product-box1 .product-social {
@@ -3330,9 +3335,10 @@ ul {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-.product-box1 .product-img-holder {
+.product-box1 .product-img-holder{
   position: relative;
   background: #fff;
+    border-top-left-radius: 35px;
 }
 .product-img-holder a{
   position: relative;
@@ -3341,6 +3347,8 @@ ul {
   width: 100%;
   height: auto;
   background: #f9f9f9;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 7px;
 }
 
 .product-box1 .product-img-holder a img {
@@ -3377,9 +3385,13 @@ ul {
 
 .product-img-holder .new{
     background: #8A1AC7;
+    transform: skew(-20deg);
+    border-radius: 2px;
 }
 .product-img-holder .sale{
     background: #8A1AC7;
+    transform: skew(-20deg);
+    border-radius: 2px;
 }
 .product-img-holder .hot{
     position: absolute;
@@ -6040,6 +6052,7 @@ ul {
 
 .company-inf-sdbcol {
     box-shadow: 0 3px 7px rgba(0,0,0,.12);
+    border-radius: 7px;
 }
 
 .company_carousel .carousel-control .fa-angle-left{
@@ -6296,12 +6309,13 @@ ul {
 .dropdown-menu > li {
     width: 100%;
     text-align: center;
+    color: black;
 }
 
 #dropdown_a{
     margin: 0;
     border: 0;
-    color: black;
+    color: #362056;
 }
 
 /*#image-size {
@@ -6512,4 +6526,28 @@ ul {
 }
 .caret{
     color: white;
+}
+.featuredContainer{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#dropdown_b{
+    color: #362056;
+}
+.flag{
+    color: red;
+}
+.ad_box_{
+    width: 100%;
+    height: 1036px;
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 20px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ad_box_ p{
+    font-size: 35px;
 }

@@ -96,6 +96,7 @@ Page Header
 
 .page-logo img{
   max-width: 175px;
+    margin-top: 17px;
 }
 
 .page-header.navbar .page-logo .logo-default {
@@ -1793,8 +1794,8 @@ Theme Panel
     width: 105px !important;
   }
 }
-/***          
-Page Loading         
+/***
+Page Loading
 ***/
 .page-on-load {
   background: #fefefe;
