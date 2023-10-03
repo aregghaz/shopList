@@ -16,7 +16,19 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'surname', 'email', 'phone', 'address', 'post_code', 'country', 'city', 'state', 'role', 'password','confirmed', 'facebook_id'
+        'name',
+        'surname',
+        'email',
+        'phone',
+        'address',
+        'post_code',
+        'country',
+        'city',
+        'state',
+        'role',
+        'password',
+        'confirmed',
+        'facebook_id'
     ];
     protected $casts = [
         'confirmed' => 'boolean',
@@ -27,11 +39,16 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
     public function messages()
     {
         return $this->hasMany(Message::class);
+    }
+    public function addrress()
+    {
+        return $this->hasMany(Address::class, 'user_id','id');
     }
     public function addNew($input)
     {
