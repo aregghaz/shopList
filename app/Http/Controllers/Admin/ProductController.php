@@ -126,7 +126,7 @@ class ProductController extends Controller
         $product->product_id = $productName->id;
         $product->price = $request['price'];
         $product->images = $data;
-        $product->sku = $request['sku'];
+        $product->sku = $request->sku;
         $product->availability = $request['availability'];
         $product->size = $request['size'];
         $product->colors = $request['colors'];
@@ -167,8 +167,7 @@ class ProductController extends Controller
         $product->category_id = $request['category_id_edit'];
         $product->sub_category_id = $request['sub_category_id'];
         $product->price = $request['price'];
-        /////FIXME FIX THIS PART
-        $product->sku = 'asdasds';
+        $product->sku = $request->sku;
         $product->availability = $request['availability'];
         $product->colors = $request['colors'];
         $product->size = $request['size'];
