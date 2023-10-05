@@ -244,11 +244,11 @@
                                         <li>
                                             <a  class="order-now">@lang('product.order')</a>
                                         </li>
-                                        <li>
-                                            <a class="add-to-cart">
-                                                <i aria-hidden="true" class="fal fa-shopping-cart"></i>
-                                            </a>
-                                        </li>
+{{--                                        <li>--}}
+{{--                                            <a class="add-to-cart">--}}
+{{--                                                <i aria-hidden="true" class="fal fa-shopping-cart"></i>--}}
+{{--                                            </a>--}}
+{{--                                        </li>--}}
                                         <li>
                                             <a class="add-to-favorite">
                                                 <i aria-hidden="true" class="fal fa-heart"></i>

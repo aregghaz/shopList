@@ -33,7 +33,7 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="{{ url('/my-account') }}" id="dropdown_a">@lang('home.myAccount')</a></li>
-                                                    <li><a href="{{ url('/logout') }}">@lang('home.logOut')</a></li>
+                                                    <li class="logout__"><a href="{{ url('/logout') }}">@lang('home.logOut')</a></li>
                                                 </ul>
                                             </div>
                                         </li>
@@ -45,7 +45,7 @@
                                         <ul class="dropdown-menu lang-ul">
                                             @foreach (Config::get('languages') as $lang => $language)
                                                 @if ($lang != App::getLocale())
-                                                    <li class="flag">
+                                                    <li class="flag" >
                                                         <a href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
                                                     </li>
                                                 @endif

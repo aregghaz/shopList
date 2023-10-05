@@ -3,7 +3,7 @@
         @if($value->status == '1')
             <span class="sticker new"><strong>@lang('home.new')</strong></span>
         @elseif($value->status == '2')
-            <span class="hot"><img src="img/bestseller.png" alt="">{{--<strong>@lang('home.hot')</strong>--}}</span>
+            <span class="hot"><img src="img/best.png" alt="bestseller">{{--<strong>@lang('home.hot')</strong>--}}</span>
         @elseif($value->status == '3')
             <span class="sticker sale"><strong>@lang('home.sale')</strong></span>
         @elseif($value->status == '4')

@@ -101,6 +101,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="ad_box_">
+                    <p>your ads</p>
+                </div>
             </div>
             <div class="col-lg-9 col-sm-8 main-right">
                 <div id="mainCarousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -125,7 +128,7 @@
                         </div>
                         <div class="item">
                             <a href="#companypage" class="sl-item-wrap"
-                               style="background-image:url('/img/axjik.jpg');"></a>
+                               style="background-image:url('/img/phenix.jpg');"></a>
                         </div>
                         {{--<div class="item">
                             <a href="#companypage" class="sl-item-wrap"
@@ -283,7 +286,7 @@
                                 <i class="flaticon-reload"></i>
                             </div>
                             <div class="media-body">
-                                <p>100% @lang('home.moneyBack')</p> 
+                                <p>100% @lang('home.moneyBack')</p>
                             </div>
                         </div>
                     </div>

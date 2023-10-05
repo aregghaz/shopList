@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:400,600,700');
 /*----------------------------------------------
 #2D8EEA-blue
-===================   
+===================
 CSS INDEX
 ===================
-1. Theme Default CSS 
+1. Theme Default CSS
   1.1 Section Title styles
   1.2 Button styles
   1.3 Search Box styles
   1.4 Owl Carousel Common styles
   1.5 ScrollUp styles
   1.6 Preloader styles
-2. Header Area 
+2. Header Area
   2.1 Header Commomn Area styles
   2.2 Home1 Header Area styles
-  2.3 Home2 Header Area styles 
+  2.3 Home2 Header Area styles
   2.4 Home3 Header Area styles
-  2.5 Home4 Header Area styles 
+  2.5 Home4 Header Area styles
   2.6 Stick Menu Area styles
   2.7 Mobile Menu Area styles
 3. Slider Area
@@ -42,21 +42,21 @@ CSS INDEX
 11. Expert Team Area styles
 12. Advantage Area
   12.1 Advantage1 Area styles
-  12.2 Advantage2 Area styles 
+  12.2 Advantage2 Area styles
   12.3 Advantage3 Area styles
   12.4 Advantage4 Area styles
 13. Best Seller Area styles
-14. Blog Box Area 
+14. Blog Box Area
   14.1 Blog Box Common Area styles
   14.2 Blog1 Box Area styles
   14.3 Blog2 Box Area styles
   14.4 Blog3 Box Area styles
-15. Blog Page Area styles   
+15. Blog Page Area styles
 16. Single Blog Page Area styles
 17. Portfolio Page Area
   17.1 Portfolio1 Page Area styles
   17.2 Portfolio2 Page Area styles
-18. Featured Area 
+18. Featured Area
   18.1 Featured Area styles
   18.2 Featured 2 Area styles
 19. Shop Area
@@ -81,18 +81,18 @@ CSS INDEX
 24. Cart Page Area styles
 25. Order History Page Area styles
 26. Order Details Page Area styles
-27. My Account Page Area styles 
-28. Contact Page Area styles 
+27. My Account Page Area styles
+28. Contact Page Area styles
 29. 404 Error Page Area styles
-30. Footer Area styles 
-31. Modal Dialog Area styles 
+30. Footer Area styles
+31. Modal Dialog Area styles
 
-===================   
+===================
 End CSS INDEX
 ===================
 --------------------------------------------*/
 /*=====================================
-1. Theme Default CSS  
+1. Theme Default CSS
 =======================================*/
 html,
 body {
@@ -237,17 +237,13 @@ ul {
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
-
 .hideThis{
     position: absolute;
     left: -100%;
 }
-
 .sidebar-section-margin {
     margin-bottom: 40px;
-    border-left: 1px solid #c1c1c1;
-    border-top: 1px solid #c1c1c1;
-    border-top-left-radius: 4px;
+    border-radius: 7px;
 }
 .inner-section-space-top {
   padding: 30px 0 0 0;
@@ -278,7 +274,9 @@ ul {
         min-height: 400px;
     }
 }
-
+.carousel-inner{
+    border-radius: 10px;
+}
 .carousel-fade .carousel-inner .item {
     transition-property: opacity;
 }
@@ -342,9 +340,9 @@ ul {
     z-index: 5;
     font-size: 40px;
     line-height: 1;
-    color: #333333;
-    background: #ffffffeb;
-    opacity: 1;
+    color: white;
+    background: #9457EB;
+    opacity: 0.9;
     padding: 8px;
 }
 
@@ -368,6 +366,7 @@ ul {
 
 #mainCarousel .item img{
   width: 100%;
+    background-image:url('/img/main-headingbg.jpg');
 }
 
 #mainCarousel .carousel-control .fal{
@@ -379,9 +378,9 @@ ul {
     display: inline-block;
     width: 30px;
     height: 60px;
-    background: #000;
+    background: #9457EB;
     padding-top: 18px;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 #mainCarousel .carousel-control .fa-angle-left{
@@ -462,7 +461,8 @@ ul {
 }
 
 .main-item p a:hover{
-    background: rgba(255, 0, 0, 0.18);
+    /*background: rgba(255, 0, 0, 0.18); */
+    background: #9457EB5C;
     padding-left: 15px;
 }
 
@@ -491,7 +491,7 @@ ul {
 }
 
 #mainCarousel .carousel-indicators .active{
-    background: #ec1b24;
+    background: #9457EB;
     width: 25px;
     height: 4px;
 }
@@ -757,15 +757,15 @@ ul {
   transition: all 0.2s ease-out;
 }
 .btn-shop-now-fill {
-  background: #111111;
+  background: white;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #ffffff;
+  color: #9457EB;
   letter-spacing: 4px;
   display: inline-block;
   padding: 10px 30px;
-  border: 1px solid #111111;
+  border: 1px solid #9457EB;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
@@ -774,11 +774,12 @@ ul {
 
 .btn-shop-now-fill:hover {
   background: transparent;
-  color: #111111;
+  color: white;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+    background-color: #9457EB;
 }
 .btn-add-to-cart-fill {
   background: #ffffff;
@@ -875,7 +876,7 @@ ul {
   border: 1px solid #111111;
 }
 .btn-send-message {
-  background: #2D8EEA;
+  background: #9457EB;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
@@ -883,7 +884,7 @@ ul {
   letter-spacing: 2px;
   display: inline-block;
   padding: 12px 40px;
-  border: 1px solid #2D8EEA;
+  border: 1px solid #9457EB;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
@@ -891,7 +892,7 @@ ul {
 }
 .btn-send-message:hover {
     color: #ffffff;
-    background: #054179;
+    background: #7A47C1;
 }
 .btn-side-nav {
   margin-top: 20px;
@@ -1075,7 +1076,7 @@ ul {
 
 .relate-products-in-single .owl-nav button span{
     font-size: 5em;
-    color: #2d8eea;
+    color: #9457EB;
     margin-top: 6px;
     display: inline-block;
 }
@@ -1090,14 +1091,14 @@ ul {
 
 .relate-products-in-single .owl-carousel .owl-nav button.owl-prev{
     left: -54px;
-    background: #ebf2f9;
+    background: #9457EB99;
     padding: 5px 10px !important;
     line-height: 15px;
 }
 
 .relate-products-in-single .owl-carousel .owl-nav button.owl-next{
     right: -54px;
-    background: #ebf2f9;
+    background: #9457EB99;
     padding: 5px 10px !important;
     line-height: 15px;
 }
@@ -1106,10 +1107,10 @@ ul {
     position: relative;
     top: 0;
 }
-.relate-products-in-single button.owl-dot { 
+.relate-products-in-single button.owl-dot {
     transition: all 0.2s;
     display: inline-block;
-    background: #ebf2f9;
+    background: #9457EB99;
     width: 20px;
     height: 20px;
     margin: 10px 5px 0;
@@ -1120,7 +1121,7 @@ ul {
 
 .relate-products-in-single .owl-dot.active{
     background: #ffffff;
-    border: 1px solid #2D8EEA;
+    border: 1px solid #9457EB;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -1173,7 +1174,8 @@ ul {
 1.5 ScrollUp styles
 --------------------------------------*/
 #scrollUp {
-  background: #7D7D7D;
+  background: #9457EB;
+  border-radius: 7px;
   bottom: 60px;
   color: #ffffff !important;
   display: block;
@@ -1204,7 +1206,8 @@ ul {
 }
 #scrollUp:hover,
 #scrollUp:focus {
-  background-color: rgba(103, 103, 103, 0.8);
+  /*background-color: rgba(103, 103, 103, 0.8);*/
+    background-color: #7A47C1;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -ms-transition: all 0.2s ease-out;
@@ -1213,7 +1216,6 @@ ul {
 }
 #scrollUp:hover i,
 #scrollUp:focus i {
-  color: #070707;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -ms-transition: all 0.2s ease-out;
@@ -1234,10 +1236,10 @@ ul {
   z-index: 9999999;
 }
 /*=====================================
-2. Header Area 
+2. Header Area
 =====================================*/
 /*-------------------------------------
-2.1 Header Commomn Area styles 
+2.1 Header Commomn Area styles
 --------------------------------------*/
 .header-top .header-top-inner-top {
   padding: 5px 0;
@@ -1902,7 +1904,6 @@ ul {
     font-size: 24px;
     margin-right: 10px;
 }
-
 .category-menu-area ul li:last-child {
   border-bottom: 0;
 }
@@ -1974,7 +1975,7 @@ ul {
 }
 
 /*-------------------------------------
-2.2 Home1 Header Area styles 
+2.2 Home1 Header Area styles
 ---------------------------------------*/
 .header-area-style1 .header-top .header-top-inner-top {
   background: #f1f1f1;
@@ -2130,33 +2131,36 @@ ul {
 
 
 /*-------------------------------------
-2.4 Home3 Header Area styles 
+2.4 Home3 Header Area styles
 ---------------------------------------*/
 .header-area-style3 .header-top .header-top-inner-top {
   border-bottom: 1px solid #e9e9e9;
-  background: #f8f8f8;
+  background: #8E94F2;
   padding: 5px 20px;
 }
 .header-area-style3 .header-top .header-top-inner-top .header-contact ul li a {
-  color: #999;
+  color: white;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 .header-area-style3 .header-top .header-top-inner-top .header-contact ul li i {
-  color: #999;
+  color : white;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 .header-area-style3 .header-top .header-top-inner-top .account-wishlist ul li a {
-  color: #999;
+  color: #362056;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+.fa-user{
+    color: white;
 }
 .header-area-style3 .header-top .header-top-inner-top .account-wishlist ul li i {
 
@@ -2184,14 +2188,15 @@ ul {
   width: 100%;
   margin: 0 auto;
   border: 1px solid #cccccc;
-  border-radius: 3px;
+  border-radius: 7px;
 }
-
+.account-wishlist ul li a{
+    border-right: 1px solid #a1a1a1;
+}
 #adv-search .dropdown-lg{
   border-left: 1px solid #cccccc;
   margin-left: 1px;
 }
-
 /*
 #adv-search:before{
     content: url("/img/giphy.gif");
@@ -2205,7 +2210,7 @@ ul {
 .search-area .input-group .form-control{
   height: 42px;
   color: #111111;
-  border-radius: 4px;
+  border-radius: 7px;
   box-shadow: none;
   border: none;
 }
@@ -2232,11 +2237,12 @@ ul {
 }
 .header-area-style3 .header-top .header-top-inner-bottom .search-area .input-group .input-group-btn .btn-group .dropdown-lg .dropdown-menu {
   margin-top: 0;
-  border-right: 1px solid #2D8EEA;
+  border-right: 1px solid #9457EB;
   padding: 10px 0 0 0;
   min-width: 250px;
   right: -1px;
-  border-radius: 0;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
 }
 
 .header-area-style3 .header-top .header-top-inner-bottom .search-area .input-group .input-group-btn .btn-group .dropdown-lg .dropdown-menu .sidenav-nav li a {
@@ -2250,11 +2256,12 @@ ul {
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+    padding-left: 10px;
 }
 .header-area-style3 .header-top .header-top-inner-bottom .search-area .input-group .input-group-btn .btn-group .dropdown-lg .dropdown-menu .sidenav-nav li a:hover {
   color: #ffffff;
-  background: #2D8EEA;
-  border-right: 2px solid #2D8EEA;
+  background: #9457EB;
+  border-right: 2px solid #9457EB;
 }
 .header-area-style3 .header-top .header-top-inner-bottom .search-area .input-group .input-group-btn .btn-group .dropdown-lg .dropdown-menu .sidenav-nav li a i {
   padding: 6px 15px;
@@ -2263,7 +2270,7 @@ ul {
 .header-area-style3 .btn-metro-search {
   width: 50px;
   height: 42px;
-  border-radius: 4px;
+  border-radius: 7px;
   /*margin-right: -x;*/
   background: #F8F8F8;
   -webkit-transition: all 0.2s ease-out;
@@ -2272,7 +2279,7 @@ ul {
   transition: all 0.2s ease-out;
 }
 .btn-metro-search span {
-  color: #333;
+  color: #8A1AC7;
   font-size: 25px;
   top: 3px;
   -webkit-transition: all 0.2s ease-out;
@@ -2281,7 +2288,7 @@ ul {
   transition: all 0.2s ease-out;
 }
 .header-area-style3 .btn-metro-search:hover {
-  background: #111111;
+  background: #8A1AC7;
 }
 .header-area-style3 .btn-metro-search:hover span {
   color: #ffffff;
@@ -2383,11 +2390,14 @@ ul {
   display: block;
 }
 .mean-container .mean-nav ul li a {
-  color: #111111;
+  color: #1111;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+.header-cart-area .bars-li{
+    color: #9457EB;
 }
 .mean-container .mean-nav ul li a:hover {
   color: #070707;
@@ -2430,14 +2440,13 @@ ul {
   padding-top: 52px;
 }
 
-
 /*=========================================
 4. Inner Page Bennar Area styles
 ==========================================*/
 
 .inner-page-banner-area{
     /*background: #2d2d2d;*/
-    background: linear-gradient(-45deg, #EE7752, #EC1B24, #23A6D5, #23D5AB);
+    background: linear-gradient(-45deg, #2D8EEA, #8E94F2, #BBADFF, #308AE4);
     background-size: 400% 400%;
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation: Gradient 15s ease infinite;
@@ -2627,7 +2636,7 @@ ul {
   text-align: center;
 }
 .services2-area .row > div {
-  padding: 0;
+    padding: 0;
 }
 .services2-area .services2-box {
   display: inline-block;
@@ -2763,9 +2772,12 @@ ul {
 
 .brand-area .owl-nav button span{
     position: relative;
-    top: -2px;
+    top: -6px;
     color: #fff;
     font-size: 57px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .brand-area .owl-nav .owl-prev {
@@ -2773,7 +2785,7 @@ ul {
   left: -30px;
   transform: translateY(-50%);
   z-index: 1;
-  background: #2D8EEA !important;
+  background: #985EEC !important;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
@@ -2784,7 +2796,7 @@ ul {
   right: -30px;
   transform: translateY(-50%);
   z-index: 1;
-  background: #2D8EEA !important;
+  background: #985EEC !important;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
@@ -2810,6 +2822,7 @@ ul {
     position: relative;
     overflow: hidden;
     background: #fafafa;
+    border-radius: 7px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.08);
 }
 
@@ -2831,7 +2844,7 @@ ul {
 }
 
 .offer-area1 h2:before{
-    font-size: 47px;
+    font-size: 30px;
     float: right;
     font-weight: 100;
 }
@@ -2840,15 +2853,18 @@ ul {
     width: 100%;
     /*margin-top: 40px;*/
     text-align: center;
-    background: #333;
-    border-radius: 4px;
+    background: #9457EB;
+    border-radius: 7px;
     letter-spacing: 2px;
+    color: white;
+    /*border: none;*/
 }
 
+
 .offer-area1 .btn-shop-now-fill:hover{
-    background: #ec1b24;
+    background: #7A47C1;
     color: #fff;
-    border: 1px solid #ec1b24;
+    border: 1px solid #7A47C1;
 }
 
 .offer-area1 .brand-area-box-r{
@@ -2871,7 +2887,6 @@ ul {
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 1px;
-  color: #212121;
   text-transform: uppercase;
 }
 
@@ -2921,11 +2936,11 @@ ul {
 }
 .countdown-section h3 {
     font-size: 24px;
-    color: #8b0000;
+    color: #318CE7;
     margin-bottom: 0;
 }
 .countdown-section p {
-    color: #8b0000;
+    color: #318CE7;
     text-transform: uppercase;
     font-size: 14px;
 }
@@ -2945,7 +2960,7 @@ ul {
 }
 
 .product-area.company{
-    padding: 0 0 64px;
+    padding: 0 0 60px;
 }
 
 .myisotop1 {
@@ -3016,8 +3031,8 @@ ul {
   transition: all 0.2s ease-out;
 }
 .myisotop2 a:hover {
-  border: 1px solid #2D8EEA;
-  background: #2D8EEA;
+  border: 1px solid #7A47C1;
+  background: #7A47C1;
   color: #ffffff;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -3026,8 +3041,8 @@ ul {
 }
 
 .myisotop2 .current {
-  border: 1px solid #2D8EEA;
-  background: #2D8EEA;
+  border: 1px solid #9457EB;
+  background: #9457EB;
   color: #ffffff;
 }
 /*-------------------------------------
@@ -3086,30 +3101,35 @@ ul {
 .advantage1-area .advantage-area-box {
     /*padding-top: 10px;*/
     background: #f1f1f1;
+    max-height: 70px;
     line-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+    border-radius: 7px;
 }
 .advantage1-area .advantage-area-box a {
   margin-right: 10px;
 }
 .advantage1-area .advantage-area-box a i:before {
   font-size: 38px;
-  color: #2D8EEA;
+  color: #9457EB;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-
 .advantage1-area .advantage-area-box .adv-div {
     margin-right: 10px;
 }
 .advantage1-area .advantage-area-box .adv-div i:before {
     font-size: 38px;
-    color: #2D8EEA;
+    color: #9457EB;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
@@ -3136,7 +3156,7 @@ ul {
 }
 
 /*======================================
-18. Featured Area 
+18. Featured Area
 ========================================*/
 /*----------------------------------------
 18.1 Featured Area styles
@@ -3157,7 +3177,7 @@ ul {
 19. Shop Area
 ========================================*/
 /*---------------------------------------
-19.1 Shop Common styles 
+19.1 Shop Common styles
 ---------------------------------------*/
 .shop-page-area {
   padding: 40px 0;
@@ -3218,7 +3238,7 @@ ul {
   color: #111111;
 }
 /*---------------------------------------
-19.2 Shop Product Box1 styles 
+19.2 Shop Product Box1 styles
 ---------------------------------------*/
 .product-box1 {
     background: #fff;
@@ -3228,6 +3248,10 @@ ul {
     text-align: center;
     border: 1px solid #efefef;
     box-shadow: 0 3px 7px rgba(0,0,0,.12);
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
 
 .rain .product-box1:before{
@@ -3249,7 +3273,7 @@ ul {
     color: #2D8EEA;
     padding: 5px 15px;
     background: #fafafa;
-    border-radius: 0;
+    border-bottom-right-radius: 10px;
 }
 
 .product-box1 .product-social {
@@ -3311,9 +3335,10 @@ ul {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-.product-box1 .product-img-holder {
+.product-box1 .product-img-holder{
   position: relative;
   background: #fff;
+    border-top-left-radius: 35px;
 }
 .product-img-holder a{
   position: relative;
@@ -3322,6 +3347,8 @@ ul {
   width: 100%;
   height: auto;
   background: #f9f9f9;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 7px;
 }
 
 .product-box1 .product-img-holder a img {
@@ -3357,10 +3384,14 @@ ul {
 }
 
 .product-img-holder .new{
-    background: #2d2d2d;
+    background: #8A1AC7;
+    transform: skew(-20deg);
+    border-radius: 2px;
 }
 .product-img-holder .sale{
-    background: #F7E200;
+    background: #8A1AC7;
+    transform: skew(-20deg);
+    border-radius: 2px;
 }
 .product-img-holder .hot{
     position: absolute;
@@ -3369,13 +3400,13 @@ ul {
 }
 
 .product-img-holder .hot img{
-    max-width: 35px;
+    max-width: 45px;
+    margin-top: -14px;
 }
 
 .product-img-holder .brand{
     background: #01CAC7;
 }
-
 .product-box1 .product-content-holder {
   background: #ffffff;
   padding: 20px 15px 25px;
@@ -3416,7 +3447,7 @@ ul {
 }
 
 .saled-price{
-  color: #EC1B24;
+  color: #9457EB;
   font-size: 16px;
   font-weight: 700;
 }
@@ -3442,7 +3473,7 @@ ul {
   transition: all 0.2s ease-out;
 }*/
 /*---------------------------------------
-19.3 Shop Product Box2 styles 
+19.3 Shop Product Box2 styles
 ---------------------------------------*/
 .product-box2 {
   margin-bottom: 30px;
@@ -3539,7 +3570,7 @@ ul {
   color: #ffffff;
 }
 /*---------------------------------------
-19.4 Shop Product Box3 styles 
+19.4 Shop Product Box3 styles
 ---------------------------------------*/
 .product-box3 {
   margin-bottom: 30px;
@@ -3647,7 +3678,7 @@ ul {
   transition: all 0.2s ease-out;
 }
 /*---------------------------------------
-19.5 Shop Product Box4 styles 
+19.5 Shop Product Box4 styles
 ---------------------------------------*/
 .product-box4 {
   margin-bottom: 30px;
@@ -4054,13 +4085,13 @@ ul {
 }
 
 .feedback-ul li > i{
-    color: #FFCD43;
+    color: #9457EB;
     font-size: 10px;
     margin-top: 10px;
 }
 
 .single-feedback-ul li > i{
-    color: #FFCD43;
+    color: #9457EB;
 }
 
 .product-details1-area .inner-product-details-right .more-option li {
@@ -4097,7 +4128,7 @@ ul {
 .product-details1-area .inner-product-details-right .price {
   font-size: 22px;
   font-weight: 600;
-  color: #2D8EEA;
+  color: #9457EB;
   display: inline-block;
   margin-bottom: 20px;
 }
@@ -4147,7 +4178,7 @@ ul {
     letter-spacing: 1px;
     font-size: 16px;
     font-weight: 600;
-    border-radius: 4px;
+    border-radius: 7px;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
@@ -4163,8 +4194,9 @@ ul {
   transition: all 0.2s ease-out;
 }
 .product-details1-area .inner-product-details-right .inner-product-details-cart li a:hover {
-  background: #676767;
+  background: #318CE7;
   color: #ffffff;
+    border: 1px solid #1D5287;
 }
 .product-details1-area .inner-product-details-right .inner-product-details-cart li a:hover i {
   color: #ffffff;
@@ -4535,7 +4567,7 @@ ul {
   padding: 35px 35px 15px 35px;
 }
 /*======================================
-21. Sidebar Area 
+21. Sidebar Area
 ========================================*/
 /*----------------------------------------
 21.1 Sidebar Banner Area styles
@@ -4547,6 +4579,7 @@ ul {
 
 .sidebar{
     box-shadow: 0 3px 7px rgba(0,0,0,.12);
+    border-radius: 7px;
 }
 
 
@@ -4593,6 +4626,7 @@ ul {
     -webkit-background-size: cover;
     background-size: cover;
     color: #fff;
+    border: 2px solid blue;
 }
 
 /*.daily-dealsdb{
@@ -4679,7 +4713,7 @@ ul {
     border: none;
     display: flex;
     padding-top: 5px;
-    background: #2d8eea;
+    background: #9457EB;
     border-radius: 4px;
 }
 
@@ -4704,8 +4738,8 @@ ul {
 }
 
 .login-registration-page-area .nav-tabs>li>a:hover{
-    background-color: #054179;
-    border: 1px solid #054179;
+    background-color: #4E2D7B;
+    border: 1px solid #4E2D7B;
 }
 
 .login-registration-page-area .nav-tabs li.active a{
@@ -4971,6 +5005,7 @@ ul {
   margin-bottom: 10px;
   border-bottom: 1px solid #efefef;
 }
+
 .cart-page-area .cart-page-top table .cart-form-heading {
   text-transform: capitalize;
   border-bottom: none;
@@ -5297,7 +5332,7 @@ ul {
   margin-bottom: 0;
 }
 /*======================================
-27. My Account Page Area styles 
+27. My Account Page Area styles
 ========================================*/
 .my-account-page-area {
   padding: 100px 0;
@@ -5340,11 +5375,11 @@ ul {
   transition: all 0.2s ease-out;
 }
 .woocommerce-MyAccount-navigation .active a {
-  background: #070707;
-  background: -webkit-linear-gradient(#070707, #111111);
-  background: -o-linear-gradient(#070707, #111111);
-  background: -moz-linear-gradient(#070707, #111111);
-  background: linear-gradient(#070707, #111111);
+  background: #362056;
+  /*background: -webkit-linear-gradient(#070707, #111111);*/
+  /*background: -o-linear-gradient(#070707, #111111);*/
+  /*background: -moz-linear-gradient(#070707, #111111);*/
+  /*background: linear-gradient(#070707, #111111);*/
   color: #ffffff;
 }
 .woocommerce-MyAccount-navigation .active a:before {
@@ -5443,8 +5478,8 @@ ul {
   position: relative;
     overflow: hidden;
   background-color: #f7f6f7;
-  color: #515151;
-  border-top: 3px solid #111111;
+  color: #362056;
+  border-top: 3px solid #362056;
   list-style: none outside;
   width: auto;
   word-wrap: break-word;
@@ -5452,21 +5487,22 @@ ul {
 .woocommerce-error a,
 .woocommerce-info a,
 .woocommerce-message a {
-  color: #212121;
+  color: #9457EB;
   font-weight: 600;
   padding: 5px 20px;
   margin-left: 30px;
-  border: 1px solid #212121;
+  border: 1px solid #9457EB;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+    border-radius: 7px;
 }
 .woocommerce-error a:hover,
 .woocommerce-info a:hover,
 .woocommerce-message a:hover {
-  background-color: #212121;
-  color: #ffffff;
+  background-color: #9457EB;
+  color: #ffff;
 }
 .woocommerce-error .woocommerce-Button,
 .woocommerce-info .woocommerce-Button,
@@ -5489,7 +5525,7 @@ ul {
   text-align: center;
   border-radius: 50%;
   font-size: 12px;
-  background-color: #111111;
+  background-color: #362056;
 }
 .woocommerce-info::before {
   content: '\f24d';
@@ -5542,7 +5578,7 @@ ul {
   z-index: 1;
 }
 /*======================================
-28. Contact Page Area styles 
+28. Contact Page Area styles
 ========================================*/
 .contact-us-page-area {
   padding: 60px 0;
@@ -5605,6 +5641,7 @@ ul {
     margin-right: 15px;
     position: relative;
     top: 3px;
+    color: #2D8EEA;
 }
 
 .contact-us-page-area .contact-us-right ul .con-address {
@@ -5694,29 +5731,29 @@ ul {
   color: #7a7a7a;
 }
 /*======================================
-30. Footer Area styles 
+30. Footer Area styles
 ========================================*/
 .footer-area {
   padding: 93px 0 0;
-  background: #eaeaea;
+  background: #757BC7;
 }
 
 .footer-area .footer-area-top {
   padding-bottom: 60px;
 }
- 
+
 .footer-area .footer-area-top .footer-box {
   padding-bottom: 30px;
 }
- 
+
 .footer-area .footer-area-top .footer-box h3 {
-  color: #111111;
+  color: white;
   letter-spacing: 1px;
   text-transform: capitalize;
   margin-bottom: 27px;
   font-size: 20px;
 }
- 
+
 .footer-area .footer-area-top .footer-box p {
   margin-bottom: 15px;
 }
@@ -5729,14 +5766,14 @@ ul {
   line-height: 1;
 }
 .footer-area .footer-area-top .footer-box .info-list li a {
-  color: #333333;
+  color: white;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 .footer-area .footer-area-top .footer-box .info-list li a:hover {
-  color: #111111;
+  color: #362056;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
@@ -5752,7 +5789,7 @@ ul {
   display: inline-block;
   margin-bottom: 7px;
   margin-right: 3px;
-  border: 1px solid #727272;
+  border: 1px solid white;
   background: transparent;
   font-size: 14px;
   -webkit-transition: all 0.2s ease-out;
@@ -5761,7 +5798,7 @@ ul {
   transition: all 0.2s ease-out;
 }
 .footer-area .footer-area-top .footer-box .tag-list li a {
-  color: #333333;
+  color: white;
   display: block;
   padding: 5px 17px;
   -webkit-transition: all 0.2s ease-out;
@@ -5770,15 +5807,15 @@ ul {
   transition: all 0.2s ease-out;
 }
 .footer-area .footer-area-top .footer-box .tag-list li:hover {
-  border: 1px solid #111111;
-  background: #111111;
+  border: 1px solid #362056;
+  background: white;
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
   -o-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
 }
 .footer-area .footer-area-top .footer-box .tag-list li:hover a {
-  color: #ffffff;
+  color: #362056;
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
   -o-transition: all 0.5s ease-in;
@@ -5796,13 +5833,13 @@ ul {
   line-height: 32px;
   border-radius: 50%;
   height: 32px;
-  border: 1px solid #111111;
+  border: 1px solid white;
   display: block;
   text-align: center;
   background: transparent;
 }
 .footer-area .footer-area-top .footer-box .footer-social li a i {
-    color: #111111;
+    color: white;
     line-height: 30px;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
@@ -5810,15 +5847,15 @@ ul {
     transition: all 0.2s ease-out;
 }
 .footer-area .footer-area-top .footer-box .footer-social li a:hover {
-    border: 1px solid #111111;
-    background: #111111;
+    border: 1px solid #362056;
+    background: white;
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
 .footer-area .footer-area-top .footer-box .footer-social li a:hover i {
-  color: #ffffff;
+  color: #362056;
 }
 .footer-area .footer-area-top .footer-box .newsletter-area h3 {
   margin-bottom: 15px;
@@ -5898,7 +5935,7 @@ ul {
 }
 
 .footer-area .footer-area-bottom p a {
-  color: #e36261;
+  color: #2D8EEA;
     margin-left: 15px;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -5906,7 +5943,7 @@ ul {
   transition: all 0.2s ease-out;
 }
 .footer-area .footer-area-bottom p a:hover {
-  color: #663399;
+  color: #236EB5;
 }
 /*.footer-area .footer-area-bottom .payment-method {
   text-align: right;
@@ -5915,7 +5952,7 @@ ul {
   display: inline-block;
 }
 /*======================================
-31. Modal Dialog Area styles 
+31. Modal Dialog Area styles
 ========================================*/
 .modal-dialog {
   background: #ffffff;
@@ -6002,8 +6039,12 @@ ul {
 
 .header-area-style3 .logo-area img{
   max-width: 100%;
+    margin-left: 0px;
 }
-
+.header-area-style3 .logo-area{
+    width: 230px;
+    padding-top: 8px;
+}
 .logo-area.company img{
     max-width: 215px;
     height: 62px;
@@ -6011,6 +6052,7 @@ ul {
 
 .company-inf-sdbcol {
     box-shadow: 0 3px 7px rgba(0,0,0,.12);
+    border-radius: 7px;
 }
 
 .company_carousel .carousel-control .fa-angle-left{
@@ -6106,6 +6148,7 @@ ul {
     margin-right: 15px;
     font-weight: 600;
     color: #212121;
+    margin-top: 4px;
 }
 
 .forget-remember-p{
@@ -6131,12 +6174,12 @@ ul {
 
 .order-now{
     min-width: 160px;
-    background: #ec1b24;
+    background: #9457EB;
     color: #fff;
 }
 
 .add-to-cart{
-    color: #2D8EEA;
+    color: #9457EB;
     background: #fff;
     border: 1px solid #999;
 }
@@ -6170,11 +6213,12 @@ ul {
     cursor: pointer;
     border-radius: 4px;
 }
-
 .whishlist-table img{
     max-width: 100%;
 }
-
+.header-cart-area a{
+    color: #8A1AC7;
+}
 .terms-and-conditions{
     margin-bottom: 80px;
 }
@@ -6265,11 +6309,13 @@ ul {
 .dropdown-menu > li {
     width: 100%;
     text-align: center;
+    color: black;
 }
 
 #dropdown_a{
     margin: 0;
     border: 0;
+    color: #362056;
 }
 
 /*#image-size {
@@ -6341,7 +6387,7 @@ ul {
 }
 
 .narrow-go {
-    background-color: #EC1B24;
+    background-color: #9457EB;
     border-radius: 3px;
     line-height: 14px;
     color: #fff!important;
@@ -6350,6 +6396,9 @@ ul {
     vertical-align: middle;
     padding: 6px 12px;
     font-size: 30px;
+}
+.narrow-go:hover{
+    background: #7A47C1;
 }
 
 .free-shipping{
@@ -6364,7 +6413,7 @@ ul {
 }
 
 .tuned-check label:hover{
-    color: #EC1B24;
+    color: #9457EB;
 }
 
 .tuned-check input[type=checkbox] {
@@ -6388,7 +6437,7 @@ ul {
     margin-top: 1px;
     width: 2mm;
     height: 4mm;
-    border: solid #EC1B24;
+    border: solid #9457EB;
     border-width: 0 .4mm .4mm 0;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -6396,8 +6445,11 @@ ul {
     transform: rotate(45deg);
     content: "";
     display: inline-block;
+    transition: 0.2s;
 }
-
+.tuned-check input[type=checkbox]:hover{
+    border: 1px solid #9457EB;
+}
 .rate-in-filter input{
     float: left;
 }
@@ -6471,4 +6523,31 @@ ul {
     background-color: #fff;
     border: 1px solid #c0c0c2;
     color: #fff;
+}
+.caret{
+    color: white;
+}
+.featuredContainer{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#dropdown_b{
+    color: #362056;
+}
+.flag{
+    color: red;
+}
+.ad_box_{
+    width: 100%;
+    height: 1036px;
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 20px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ad_box_ p{
+    font-size: 35px;
 }

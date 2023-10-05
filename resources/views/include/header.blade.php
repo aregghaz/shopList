@@ -33,7 +33,7 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <li><a href="{{ url('/my-account') }}" id="dropdown_a">@lang('home.myAccount')</a></li>
-                                                    <li><a href="{{ url('/logout') }}">@lang('home.logOut')</a></li>
+                                                    <li class="logout__"><a href="{{ url('/logout') }}" id="dropdown_b">@lang('home.logOut')</a></li>
                                                 </ul>
                                             </div>
                                         </li>
@@ -64,7 +64,7 @@
                         <div class="col-md-3 col-sm-3 col-xs-6">
                             <div class="logo-area">
                                 <a href="{{ url('/') }}" title="ShopList.am">
-                                    <img src="/img/logo.png" alt="shoplist-logo">
+                                    <img src="/img/logo5.svg" alt="shoplist-logo">
                                 </a>
                             </div>
                         </div>
@@ -127,10 +127,10 @@
                                         <i class="fal fa-heart" aria-hidden="true" ></i>
                                     </a>
                                 </li>
-                                <li class="cartLi">
-                                    @include('include.cart')
+{{--                                <li class="cartLi">--}}
+{{--                                    @include('include.cart')--}}
 
-                                </li>
+{{--                                </li>--}}
                                 <li class="bars-li"><span class="far fa-bars menu-bars"></span></li>
                             </ul>
                         </div>
