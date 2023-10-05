@@ -126,7 +126,7 @@ class ProductController extends Controller
         $product->product_id = $productName->id;
         $product->price = $request['price'];
         $product->images = $data;
-        $product->sku = $request->sku;
+        $product->sku = 'asdasd';
         $product->availability = $request['availability'];
         $product->size = $request['size'];
         $product->colors = $request['colors'];
