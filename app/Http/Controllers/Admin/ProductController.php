@@ -167,7 +167,8 @@ class ProductController extends Controller
         $product->category_id = $request['category_id_edit'];
         $product->sub_category_id = $request['sub_category_id'];
         $product->price = $request['price'];
-        $product->sku = $request->sku;
+        /////FIXME FIX THIS PART
+        $product->sku = 'asdasds';
         $product->availability = $request['availability'];
         $product->colors = $request['colors'];
         $product->size = $request['size'];
