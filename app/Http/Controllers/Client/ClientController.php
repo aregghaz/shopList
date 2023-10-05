@@ -55,7 +55,7 @@ class ClientController extends Controller
        $user->confirmed = 1;
        $user->save();
        $companies = new Companies();
-       $companies->id = $user->id;
+       ///$companies->id = $user->id;
        $companies->name = $request->name;
        $companies->logo = $filename;
        $companies->user_id =  $user->id ;
