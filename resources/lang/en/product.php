@@ -4,7 +4,7 @@ return [
     'Availability' => 'Availability',
     'category' => 'Category',
     'cart' => 'Add To Cart',
-    'order' => 'Order Now',
+    'order' => 'Buy',
     'Description' => 'Description',
     'Review' => 'Reviews',
     'Color' => 'Choose Color',
