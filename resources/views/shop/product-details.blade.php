@@ -193,6 +193,7 @@
                                     ?>
                                     <a href="#description">@lang('product.prodMore')...</a>
                                 </p>
+                                @if($product->type_id == 0)
                                 {{-- product size --}}
                                 <div class="product-size">
                                     <h5 class="sub-title">@lang('product.Size')</h5>
@@ -217,19 +218,24 @@
                                     @endfor
 
                                 </div>
+                                @endif
                                 {{-- color list end here --}}
                                 <div class="product-details-content">
-
+                                    @if($product->type_id == 0)
                                     <p><span>@lang('product.Availability'):</span> {{ $product->availability }}</p>
                                     <p>
+                                        @endif
                                         <span>@lang('product.Seller'): </span>
                                         <a href="{{ route('companyByName', ['name' => $product->Company->name]) }}">
                                             <span class="seller-brandname">{{ $product->Company->name }}</span>
                                         </a>
                                     </p>
                                 </div>
+                                @if($product->type_id == 0)
                                 <form id="checkout-form">
+
                                     <p class="ctt-p"><span>@lang('product.quantity'):</span></p>
+
                                     <ul class="inner-product-details-cart">
                                         <li class="quantity-li">
                                             <div class="input-group quantity-holder" id="quantity-holder">
@@ -240,13 +246,11 @@
                                             </div>
                                         </li>
                                     </ul>
-
                                     <ul class="inner-product-details-cart">
-                                    @if($product->type_id == 0)
+
                                             <li>
                                                 <a  class="order-now">@lang('product.order')</a>
                                             </li>
-                                        @endif
 {{--                                        <li>--}}
 {{--                                            <a class="add-to-cart">--}}
 {{--                                                <i aria-hidden="true" class="fal fa-shopping-cart"></i>--}}
@@ -259,6 +263,7 @@
                                         </li>
                                     </ul>
                                 </form>
+                                @endif
                             </div>
                         </div>
                     </div>
