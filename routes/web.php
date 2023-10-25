@@ -163,11 +163,11 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/products/getsubcajax', [ProductController::class,"getsubcategoryajax"]);
 
 
-        Route::get('/products/del_product/{id}', "Admin\ProductController@del_product");
+        Route::get('/products/del_product/{id}', [ProductController::class, "del_product"]);
 
-        Route::get('/products/featured/{id}', "Admin\ProductController@featured");
-        Route::get('/products/sale/{id}', "Admin\ProductController@sale");
-        Route::get('/products/best/{id}', "Admin\ProductController@best");
+        Route::get('/products/featured/{id}', [ProductController::class, "featured"]);
+        Route::get('/products/sale/{id}',[ProductController::class ,"sale"]);
+        Route::get('/products/best/{id}', [ProductController::class, "best"]);
 
 
         Route::get('/brands', [ProductController::class, "get_brands"]);
@@ -175,8 +175,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/sales', [ProductController::class, "get_sales"]);
         Route::get('/bests', [ProductController::class, "get_bests"]);
 
-        Route::get('/del_brand/{id}', "Admin\ProductController@del_brand");
-        Route::get('/del_featured/{id}', "Admin\ProductController@del_featured");
+        Route::get('/del_brand/{id}', [ProductController::class, "del_brand"]);
+        Route::get('/del_featured/{id}', [ProductController::class,"del_featured"]);
 
         Route::get('/del_sales/{id}', "Admin\ProductController@del_sales");
         Route::get('/del_bests/{id}', "Admin\ProductController@del_bests");
