@@ -231,9 +231,9 @@
                                         </a>
                                     </p>
                                 </div>
-                                @if($product->type_id == 0)
-                                <form id="checkout-form">
 
+                                <form id="checkout-form">
+                                    @if($product->type_id == 0)
                                     <p class="ctt-p"><span>@lang('product.quantity'):</span></p>
 
                                     <ul class="inner-product-details-cart">
@@ -246,8 +246,9 @@
                                             </div>
                                         </li>
                                     </ul>
+                                    @endif
                                     <ul class="inner-product-details-cart">
-
+                                        @if($product->type_id == 0)
                                             <li>
                                                 <a  class="order-now">@lang('product.order')</a>
                                             </li>
@@ -256,6 +257,7 @@
 {{--                                                <i aria-hidden="true" class="fal fa-shopping-cart"></i>--}}
 {{--                                            </a>--}}
 {{--                                        </li>--}}
+                                        @endif
                                         <li>
                                             <a class="add-to-favorite">
                                                 <i aria-hidden="true" class="fal fa-heart"></i>
@@ -263,7 +265,7 @@
                                         </li>
                                     </ul>
                                 </form>
-                                @endif
+
                             </div>
                         </div>
                     </div>
