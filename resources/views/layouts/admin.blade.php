@@ -8,6 +8,7 @@
 <html lang="en" class="no-js">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
+
 <head>
     <meta charset="utf-8"/>
     <title>ShopList</title>
@@ -130,7 +131,7 @@
                             <li class="external">
                                 @if(count($newOrder))
                                     <h3>@lang('admin.youHave') <span
-                                                class="bold"> {{ count($newOrder) }} @lang('admin.new') </span> @lang('admin.orders')
+                                            class="bold"> {{ count($newOrder) }} @lang('admin.new') </span> @lang('admin.orders')
                                     </h3>
                                     <a href="{{ url('/admin/adminOrders') }}">@lang('admin.all')</a>
                                 @else
@@ -213,8 +214,8 @@
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
     <!-- BEGIN SIDEBAR -->
-@include('include.admin.menu')
-<!-- END SIDEBAR -->
+    @include('include.admin.menu')
+    <!-- END SIDEBAR -->
     <div class="page-content-wrapper">
         @yield('content')
     </div>
@@ -240,33 +241,35 @@
 <script src="/admin/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
 @if(isset($page))
+    {{--    @if(isset($page))--}}
+    {{--            <?php dd($page);?>--}}
+    {{--    @endif--}}
     @if($page == 'dashboard')
 
+        <!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support -->
+        <script src="/admin/global/plugins/flot/jquery.flot.js" type="text/javascript"></script>
+        <script src="/admin/global/plugins/flot/jquery.flot.resize.js" type="text/javascript"></script>
+        <script src="/admin/global/plugins/flot/jquery.flot.categories.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- DataTables -->
+        <script type="text/javascript"
+                src="/admin/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript"
+                src="/admin/global/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+        <script type="text/javascript"
+                src="/admin/global/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+        <script type="text/javascript"
+                src="/admin/global/plugins/datatables/extensions/Scroller/js/dataTables.scroller.min.js"></script>
+        <script type="text/javascript"
+                src="/admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
 
-<!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support -->
-<script src="/admin/global/plugins/flot/jquery.flot.js" type="text/javascript"></script>
-<script src="/admin/global/plugins/flot/jquery.flot.resize.js" type="text/javascript"></script>
-<script src="/admin/global/plugins/flot/jquery.flot.categories.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL PLUGINS -->
-<!-- DataTables -->
-<script type="text/javascript" src="/admin/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript"
-        src="/admin/global/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
-<script type="text/javascript"
-        src="/admin/global/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
-<script type="text/javascript"
-        src="/admin/global/plugins/datatables/extensions/Scroller/js/dataTables.scroller.min.js"></script>
-<script type="text/javascript"
-        src="/admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
 
-
-<!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="/admin/global/scripts/metronic.js" type="text/javascript"></script>
-<script src="/admin/admin/layout4/scripts/layout.js" type="text/javascript"></script>
-<script src="/admin/admin/layout4/scripts/demo.js" type="text/javascript"></script>
-<script src="/admin/admin/pages/scripts/ecommerce-index.js"></script>
-<script src="/admin/admin/pages/scripts/table-advanced.js"></script>
-
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="/admin/global/scripts/metronic.js" type="text/javascript"></script>
+        <script src="/admin/admin/layout4/scripts/layout.js" type="text/javascript"></script>
+        <script src="/admin/admin/layout4/scripts/demo.js" type="text/javascript"></script>
+        <script src="/admin/admin/pages/scripts/ecommerce-index.js"></script>
+        <script src="/admin/admin/pages/scripts/table-advanced.js"></script>
 
     @elseif($page == 'profile')
 
@@ -281,14 +284,16 @@
         <script src="/admin/admin/pages/scripts/profile.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
 
-
     @elseif($page == 'newProduct')
 
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <script type="text/javascript" src="/admin/global/plugins/select2/select2.min.js"></script>
-        <script type="text/javascript" src="/admin/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="/admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
-        <script type="text/javascript" src="/admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript"
+                src="/admin/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript"
+                src="/admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+        <script type="text/javascript"
+                src="/admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
         <script src="/admin/global/scripts/metronic.js" type="text/javascript"></script>
@@ -310,18 +315,19 @@
 
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <script type="text/javascript" src="/admin/global/plugins/select2/select2.min.js"></script>
-        <script type="text/javascript" src="/admin/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="/admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
-        <script type="text/javascript" src="/admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript"
+                src="/admin/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript"
+                src="/admin/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+        <script type="text/javascript"
+                src="/admin/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
         <script src="/admin/global/scripts/metronic.js" type="text/javascript"></script>
         <script src="/admin/admin/layout4/scripts/layout.js" type="text/javascript"></script>
 
         <script src="/admin/global/scripts/datatable.js"></script>
-
-
-        <script src="/js/script.js" type="text/javascript"></script>
+        <script src="/js/script.js" ></script>
 
     @endif
 @endif
@@ -330,7 +336,7 @@
     jQuery(document).ready(function () {
         Metronic.init(); // init metronic core components
         Layout.init(); // init current layout
-     @if(isset($page))
+        @if(isset($page))
         @if($page == 'dashboard')
         EcommerceIndex.init();
         @elseif($page == 'profile')
@@ -338,7 +344,7 @@
         @elseif($page == 'newProduct')
         EcommerceProducts.init();
         @endif
-    @endif
+        @endif
 
     });
 </script>

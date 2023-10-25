@@ -1,5 +1,6 @@
 @extends("layouts.singleProduct")
 @section("content")
+{{--    <?php var_dump($product);die;?>--}}
     <!-- Inner Page Banner Area Start Here -->
     <div class="inner-page-banner-area">
         <div class="custom-container">
@@ -241,9 +242,11 @@
                                     </ul>
 
                                     <ul class="inner-product-details-cart">
-                                        <li>
-                                            <a  class="order-now">@lang('product.order')</a>
-                                        </li>
+                                    @if($product->type_id == 0)
+                                            <li>
+                                                <a  class="order-now">@lang('product.order')</a>
+                                            </li>
+                                        @endif
 {{--                                        <li>--}}
 {{--                                            <a class="add-to-cart">--}}
 {{--                                                <i aria-hidden="true" class="fal fa-shopping-cart"></i>--}}

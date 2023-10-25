@@ -131,7 +131,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         /* product*/
         Route::get('/products', [ProductController::class, "index"])->name('products');
-        Route::post('/products/edit_product', [ProductController::class,"edit_product"]);
+        Route::post('/products/edit_product', [ProductController::class,"edit_product"])->name('edit_product');;
         Route::get('/new-product', [ProductController::class, "newProduct"]);
         Route::post('/products/add_product', [ProductController::class, "add_product"]);
         Route::get('/products/brand/{id}', [ProductController::class,"brand"]);

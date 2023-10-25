@@ -1,6 +1,7 @@
 
 var countProduct;
 $(document).ready(function () {
+    console.log('asds')
     sessionStorage.removeItem('color');
     sessionStorage.removeItem('size');
     if ($('.color').length == 1) {

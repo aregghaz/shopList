@@ -1,10 +1,10 @@
-$(".carousel").swipe({
-    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-        if (direction == 'left') $(this).carousel('next');
-        if (direction == 'right') $(this).carousel('prev');
-    },
-    allowPageScroll:"vertical"
-});
+// $(".carousel").swipe({
+//     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+//         if (direction == 'left') $(this).carousel('next');
+//         if (direction == 'right') $(this).carousel('prev');
+//     },
+//     allowPageScroll:"vertical"
+// });
 
 // For show  session message //
 window.setTimeout(function () {
@@ -122,12 +122,13 @@ function fileFunctionedit() {
 
 
 $('.show_modal').click(function () {
-
+    console.log('asdsa')
     var id = $(this).data('id');
     var name = $(this).data('name');
     var user_id = $(this).data('userid');
     var user_name = $(this).data('user');
     var nameEn = $(this).data('nameen');
+    var typeId = $(this).data('typeid');
     var nameRu = $(this).data('nameru');
     var nameAm = $(this).data('nameam');
     var category_name = $(this).data('categoryname');
@@ -152,8 +153,6 @@ $('.show_modal').click(function () {
         $('.demo_img').append('<li class="col-sm-4 active"><a aria-expanded="false" data-toggle="tab" href="#metro-related"><img class="img-responsive " src="/img/products/' + eval(images) + '" alt="related3"></a></li>');
 
     } else {
-        console.log(images.length)
-
         for (var j = 0; j < images.length; j++) {
             if (k == 4) {
                 $('.tab-content').append('<div id=\"metro-related' + k + '\" class="tab-pane fade active in"><a href="#"> <img class="img-responsive images_product_show1 " src=\"/img/products/' + images[j] + '\" alt="single"></a></div> ');
@@ -171,9 +170,10 @@ $('.show_modal').click(function () {
     for (var i = 0; i < colors.length; i++) {
         $('.insert-color').append('<div class="col-sm-1 pull-right" style=\"background-color:' + colors[i] + '\">.</div>');
     }
-
+    console.log(typeId)
     $('#product_id').text(id);
     $('#nameEn').text(nameEn);
+   /// $('#type_id').val(typeId);
     $('#nameRu').text(nameRu);
     $('#nameAm').text(nameAm);
     $('#category_name').text(category_name);
@@ -213,6 +213,7 @@ $('.edit_modal').click(function () {
     var size = $(this).closest('td').find('.show_modal').data('size');
     var images = $(this).closest('td').find('.show_modal').data('images');
     var colors = $(this).closest('td').find('.show_modal').data('colors');
+    var typeId = $(this).closest('td').find('.show_modal').data('typeid');
 
     $('#forImages').empty()
 
@@ -231,12 +232,13 @@ $('.edit_modal').click(function () {
         $('.mycolor_edit').append(' <div class="form-group col-xs-12"> <label for="icon"></label>' +
             ' <input type="color" class="form-control" name="colors[]" value=\"' + colors[j] + '"\  /></div>');
     }
-
+    console.log(typeId)
 
     $('#product_id_edit').text(id);
     $('#product_id_edit_hidden').val(id);
     $('#user_name_edit').text(user_name);
     $('#editeNameEn').val(nameEn);
+    $('#type_id').val(typeId);
     $('#editeNameAm').val(nameAm);
     $('#editeNameRu').val(nameRu);
     $('#category_id_edit').val(category_id);

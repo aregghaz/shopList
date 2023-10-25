@@ -68,6 +68,7 @@ class ProductController extends Controller
 
         $data['newOrder'] = $this->Orders();
         $data['page'] = 'product';
+//        dd($data);
         return view('admin.product', $data);
     }
 
@@ -127,6 +128,7 @@ class ProductController extends Controller
         $product->price = $request['price'];
         $product->images = $data;
         $product->sku = 1;
+        $product->type_id = 1;
         $product->availability = $request['availability'];
         $product->size = $request['size'];
         $product->colors = $request['colors'];
@@ -153,7 +155,6 @@ class ProductController extends Controller
             }
             $product->images = $data;
         }
-      //  dd($product_id);
         $productName = ProductName::find($product_id);
         $productName->nameEn = $request->nameEn;
         $productName->nameRu = $request->nameRu;
@@ -162,6 +163,7 @@ class ProductController extends Controller
         $productName->descriptionAm = $request->descriptionAm;
         $productName->descriptionRu = $request->descriptionRu;
         $productName->update();
+
         $product->user_id = Auth::user()->id;
         $product->user = Auth::user()->name;
         $product->category_id = $request['category_id_edit'];
@@ -171,6 +173,8 @@ class ProductController extends Controller
         $product->availability = $request['availability'];
         $product->colors = $request['colors'];
         $product->size = $request['size'];
+        $product->type_id = (int)$request['type_id'];
+
         $product->update();
         return redirect()->back()->with('editproduct', "Edit product successful!");
     }

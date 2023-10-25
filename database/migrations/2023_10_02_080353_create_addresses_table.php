@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('addresses', function (Blueprint $table) {
-            $table->id();
-            $table->bigIncrements('user_id');
+            $table->increments('id');
+            $table->bigInteger('user_id');
             $table->string('phone', 30);
             $table->string('address', 30);
             $table->string('post_code', 10);

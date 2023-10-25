@@ -69,6 +69,7 @@
                                             data-subcategoryid="{{ $product->sub_category_id }}"
                                             data-subcategoryname="@if(!empty($product->SubCategoryProduct->name)) {{ $product->SubCategoryProduct->name }} @else @endif "
                                             data-price="{{ $product->price }}"
+                                            data-typeid="{{ $product->type_id }}"
                                             data-descriptionam="{{ $product->productName->descriptionAm }}"
                                             data-descriptionru="{{ $product->productName->descriptionRu }}"
                                             data-descriptionen="{{ $product->productName->descriptionEn }}"
@@ -146,7 +147,7 @@
             <!-- /.content -->
         </div>
         <footer class="main-footer">
-            <strong>Copyright &copy; 2019 <a href="shoplist.am">Shoplist.am</a> </strong> All
+            <strong>Copyright &copy; 2019 <a href="speedshop.am">speedshop.am</a> </strong> All
             rights
             reserved.
         </footer>
@@ -258,6 +259,14 @@
                                     <label for="subcategory_name">@lang('admin.subCategory'):</label>
                                     <select class="form-control" id="subcategory_edit" name="sub_category_id">
                                         <option value="0">@lang('admin.selectSubCategory')</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-4 col-xs-12">
+                                    <label for="type_id">Tesak:</label>
+                                    <select class="form-control" id="type_id" name="type_id">
+                                        <option value="0">Apranq</option>
+                                        <option value="1">Carayutyun</option>
+
                                     </select>
                                 </div>
                                 <div class="form-group col-sm-4 col-xs-12">
