@@ -164,8 +164,8 @@ class ProductController extends Controller
         $productName->descriptionRu = $request->descriptionRu;
         $productName->update();
 
-        $product->user_id = Auth::user()->id;
-        $product->user = Auth::user()->name;
+        $product->user_id = $request->user()->company->id;
+        $product->user =$request->user()->name;
         $product->category_id = $request['category_id_edit'];
         $product->sub_category_id = $request['sub_category_id'];
         $product->price = $request['price'];
@@ -303,6 +303,7 @@ class ProductController extends Controller
 
     public function productDetails(Request $request)
     {
+
         $productId =$request->id ;
         $data = $this->getLang();
         $data['product'] = Products::with('SubCategoryProduct', 'CategoryProduct', 'ProductName', 'Review', 'Company', 'AverangeStars')

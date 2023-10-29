@@ -50,6 +50,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Address::class, 'user_id','id');
     }
+    public function company()
+    {
+        return $this->hasOne(Companies::class, 'user_id','id');
+    }
     public function addNew($input)
     {
         $check = static::where('facebook_id',$input['facebook_id'])->first();
