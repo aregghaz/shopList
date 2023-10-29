@@ -135,19 +135,19 @@
                             @if(!empty($company->img1))
                                 <div class="item active">
                                     <a href="#companypage" class="sl-item-wrap"
-                                       style="background-image:url('/img/slider/{{ $company->img1 }})"></a>
+                                       style="background-image:url('/img/slider/{{ $company->img1 }}')"></a>
                                 </div>
                             @endif
                             @if(!empty($company->img2))
                                 <div class="item ">
                                     <a href="#companypage" class="sl-item-wrap"
-                                       style="background-image:url('/img/slider/{{ $company->img2 }})"></a>
+                                       style="background-image:url('/img/slider/{{ $company->img2 }}')"></a>
                                 </div>
                             @endif
                             @if(!empty($company->img3))
                                 <div class="item ">
                                     <a href="#companypage" class="sl-item-wrap"
-                                       style="background-image:url('/img/slider/{{ $company->img3 }})"></a>
+                                       style="background-image:url('/img/slider/{{ $company->img3 }}')"></a>
                                 </div>
                             @endif
                         </div>
