@@ -147,7 +147,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/admin_edit_user', [UserController::class,"admin_edit_user"]);
         Route::post('/updateUserFromAdmin', "Admin\AdminController@updateUserFromAdmin");
         Route::post('/updateUserFromAdminLogo', [AdminController::class,"updateUserFromAdminLogo"]);
-        Route::post('/updateUserFromAdminSlider', "Admin\AdminController@updateUserFromAdminSlider");
+        Route::post('/updateUserFromAdminSlider', [AdminController::class, "updateUserFromAdminSlider"]);
         Route::post('/updatePasswordFromAdmin', "Admin\AdminController@updatePasswordFromAdmin");
         Route::get('/deluser/{id}', "UserController@deluser");
         Route::get('/categories', [CategoriesController::class, "index"])->name('adminCategory');
