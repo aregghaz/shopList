@@ -89,7 +89,7 @@
                                                             @if(isset($category))
                                                                 @foreach($category as $value)
                                                                     <li value="{{ $value->id }}" title="{{ $value->name }}">
-                                                                        <a data-id="{{ $value->id }}" title="{{ $value->name }}">{!! $value->icon !!} {{ $value->name }}</a>
+                                                                        <a data-id="{{ $value->id }}" title="{{ $value->name }}">{{ $value->name }}</a>
                                                                     </li>
                                                                 @endforeach
                                                             @endif
