@@ -263,6 +263,8 @@ class CartController extends Controller
             }
         }
 
+        $data = [];
+        $totalQty=0;
         $preorder = PreOrder::where(['user_id' => $user_id])->get();
         for ($i = 0; $i < count($preorder); $i++) {
             $data[$i]['product'] = Products::find($preorder[$i]->product_id);
@@ -273,6 +275,7 @@ class CartController extends Controller
             $data[$i]['product_id'] = $preorder[$i]->product_id;
             $totalQty = $i;
         }
+        //dd($data);
         $request->session()->put('cart', $data);
         $request->session()->put('result', $totalQty);
         if ($cmd == 'deleteByID') {

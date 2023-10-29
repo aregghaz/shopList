@@ -124,13 +124,15 @@ $(document).ready(function () {
             $('.product-size').attr('style', 'border:1px solid red;padding: 5px')
         }
     })
-})
-$('.stars-review').on('click', function () {
-    $('.stars-review a i').attr('class', 'fal fa-star')
-    var countStars = 0;
-    $(this).find('a').find('i').each(function () {
-        countStars++;
-        $(this).attr('class', 'fas fa-star')
+    $('.stars-review').on('click', function () {
+        console.log('asdas')
+        $('.stars-review a i').attr('class', 'fal fa-star')
+        var countStars = 0;
+        $(this).find('a').find('i').each(function () {
+            countStars++;
+            $(this).attr('class', 'fas fa-star')
+        })
+        $('#countStars').val(countStars)
     })
-    $('#countStars').val(countStars)
 })
+

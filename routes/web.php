@@ -143,7 +143,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/profile', [AdminController::class, "profile"])->name('profile');
         Route::get('/dashboard', [AdminController::class, "home"])->name('adminHome');
         Route::get('/adminOrders', [AdminController::class, "adminOrders"])->name('adminOrders');
-        Route::get('/changeStatus', ['uses' => "Admin\AdminController@changeStatus", 'as' => 'changeStatus']);
+        Route::get('/changeStatus', [AdminController::class,"changeStatus"])->name('changeStatus');
         Route::post('/admin_edit_user', [UserController::class,"admin_edit_user"]);
         Route::post('/updateUserFromAdmin', "Admin\AdminController@updateUserFromAdmin");
         Route::post('/updateUserFromAdminLogo', [AdminController::class,"updateUserFromAdminLogo"]);
