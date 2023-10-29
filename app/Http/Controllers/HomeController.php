@@ -118,7 +118,6 @@ class HomeController extends Controller
     public function companyByName(Request $request) {
         $data = $this->getLang();
         $companyName =  $request->name;
-
         $data['company'] = Companies::where('name', $companyName)->first();
         $data['products'] = Products::with('ProductName', 'AverangeStars')->where(['user_id' => $data['company']->user_id])->paginate(12);
         return view('shop.companie',$data);
