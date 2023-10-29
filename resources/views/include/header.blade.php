@@ -9,7 +9,7 @@
                                 <ul>
                                     <li><i class="fa fa-phone" aria-hidden="true"></i><a href="+1234567890"> + 123 456
                                             7890</a></li>
-                                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> info@shoplist.am</a>
+                                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> info@speedshop.am</a>
                                     </li>
                                 </ul>
                             </div>
@@ -63,8 +63,8 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-6">
                             <div class="logo-area">
-                                <a href="{{ url('/') }}" title="ShopList.am">
-                                    <img src="/img/logo5.svg" alt="shoplist-logo">
+                                <a href="{{ url('/') }}" title="speedshop.am">
+                                    <img src="/img/logo5.svg" alt="speedshop.am">
                                 </a>
                             </div>
                         </div>

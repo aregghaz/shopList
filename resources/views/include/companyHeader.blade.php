@@ -63,8 +63,8 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-6">
                             <div class="logo-area">
-                                <a href="{{ url('/') }}" title="ShopList.am">
-                                    <img src="/img/logo.png" alt="shoplist-logo">
+                                <a href="{{ url('/') }}" title="speedshop.am">
+                                    <img src="/img/logo5.svg" alt="speedshop">
                                 </a>
                             </div>
                         </div>
