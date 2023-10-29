@@ -99,11 +99,12 @@ $(document).ready(function () {
             $('.product-size').attr('style', 'border:2px solid red;padding: 5px')
         }
     })
-    $('.add-to-favorite').on('click', function () {
+    $('.fa-heart').on('click', function () {
+        console.log('sads')
         var color = sessionStorage.getItem("color");
         var size = sessionStorage.getItem("size");
 
-        if (color && size) {
+        if (true) {
 
 
             $.ajax({

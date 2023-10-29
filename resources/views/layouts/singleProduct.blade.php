@@ -108,6 +108,7 @@
 <script src="{{ asset('js/script.js')}}" type="text/javascript"></script>
 
 <script src="{{ asset('js/statistic.js')}}"></script>
+<script src="{{ asset('js/productDetails.js')}}"></script>
 </body>
 
 </html>

@@ -18,7 +18,9 @@
                             @if(isset($category) )
                                 @foreach($category as $value)
                                     <li>
-                                        <a href="{{ route('category', ['category' => $value->id]) }}" title="{{ $value->name }}">{!! $value->icon !!}{{ $value->name }}</a>
+                                        <a href="{{ route('category', ['category' => $value->id]) }}" title="{{ $value->name }}">
+{{--                                            {!! $value->icon !!}--}}
+                                            {{ $value->name }}</a>
                                         <ul class="dropdown-menu">
                                             @foreach($subCategory as $key)
                                                 <?php

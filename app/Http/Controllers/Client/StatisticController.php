@@ -11,6 +11,7 @@ class StatisticController extends Controller
 {
     public function saveStatistic(Request $request) {
         $id = $request->id;
+
         $product = Products::find($id);
         $check = Statistic::where('product_id', $id)->first();
 
@@ -24,6 +25,7 @@ class StatisticController extends Controller
             $check->count = (int)$check->count + 1;
             $check->update();
         }
+        return true;
     }
 
 }

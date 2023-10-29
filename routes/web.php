@@ -44,7 +44,7 @@ Route::get('all-product', [ProductController::class, 'allProduct'])->name('allPr
 
 
 
-Route::get('/saveStatistic', ['uses' => [StatisticController::class, "saveStatistic"]])->name('saveStatistic');
+Route::get('/saveStatistic',  [StatisticController::class, "saveStatistic"])->name('saveStatistic');
 
 
 Route::get('/category', [HomeController::class, 'category'])->name('category');
@@ -78,7 +78,7 @@ Route::get('/forgot-password', function () {
 });
 
 /*wishList*/
-Route::get('/add-to-favorite', [CartController::class, "addWish"]);
+Route::get('/add-to-favorite', [CartController::class, "addWish"])->name('wishList');
 Route::get('wishList', [CartController::class,"getWish"]);
 
 
@@ -176,7 +176,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/bests', [ProductController::class, "get_bests"]);
 
         Route::get('/del_brand/{id}', [ProductController::class, "del_brand"]);
-        Route::get('/del_featured/{id}', [ProductController::class,"del_featured"]);
+        Route::get('/del_featured/{id}', [ProductController::class,"del_featured"]              );
 
         Route::get('/del_sales/{id}', "Admin\ProductController@del_sales");
         Route::get('/del_bests/{id}', "Admin\ProductController@del_bests");
