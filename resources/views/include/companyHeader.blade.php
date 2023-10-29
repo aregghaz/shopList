@@ -137,7 +137,7 @@
                                                             <div class="media">
                                                                 <div class="pull-left cart-product-img">
                                                                     <a href="#">
-                                                                        @if(false)
+                                                                        @if(true)
                                                                             <img class="img-responsive seshomimg" alt="product"
                                                                                  src="{{ asset('/img/products/'.$item['product']['images']) }}">
                                                                         @else
